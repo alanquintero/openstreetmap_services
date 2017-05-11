@@ -9,14 +9,9 @@
 
 package com.alanquintero.openstreetmap.conf;
 
-import org.springframework.context.annotation.ComponentScan;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.web.servlet.config.annotation.EnableWebMvc;
-import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-@Configuration
-@EnableWebMvc
-@ComponentScan(basePackages = "com.alanquintero.openstreetmap")
-public class WebConfig extends WebMvcConfigurerAdapter {
+@SpringBootApplication(scanBasePackages = "com.alanquintero.openstreetmap")
+public class WebConfig {
 
 }
