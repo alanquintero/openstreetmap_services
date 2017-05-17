@@ -3,5 +3,5 @@
 
 ## Functionality
 
-It is the back-edn functionality that contains REST services to return JSON information used in the front-end to highlight a map.
+It is the back-end functionality that contains REST services to return JSON information used in the front-end to highlight a map.
 
