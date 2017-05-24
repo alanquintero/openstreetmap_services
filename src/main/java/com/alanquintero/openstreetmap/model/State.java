@@ -21,6 +21,26 @@ public class State {
 
 	private String coordinates;
 
+	public State() {
+	}
+
+	public State(int stateNumber, String stateName, String geometryType, String coordinates) {
+		super();
+		this.stateNumber = stateNumber;
+		this.stateName = stateName;
+		this.geometryType = geometryType;
+		this.coordinates = coordinates;
+	}
+
+	public State(int idState, int stateNumber, String stateName, String geometryType, String coordinates) {
+		super();
+		this.idState = idState;
+		this.stateNumber = stateNumber;
+		this.stateName = stateName;
+		this.geometryType = geometryType;
+		this.coordinates = coordinates;
+	}
+
 	public int getIdState() {
 		return idState;
 	}
