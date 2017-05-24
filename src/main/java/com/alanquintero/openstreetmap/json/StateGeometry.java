@@ -7,14 +7,28 @@
  * permission of Alan Quintero.
  *******************************************************/
 
-package com.alanquintero.openstreetmap.dao;
+package com.alanquintero.openstreetmap.json;
 
-import java.util.List;
+public class StateGeometry {
 
-import com.alanquintero.openstreetmap.model.State;
+	private String type;
 
-public interface StateDAO {
+	private String coordinates;
 
-	public List<State> getStates();
+	public String getType() {
+		return type;
+	}
+
+	public void setType(String type) {
+		this.type = type;
+	}
+
+	public String getCoordinates() {
+		return coordinates;
+	}
+
+	public void setCoordinates(String coordinates) {
+		this.coordinates = coordinates;
+	}
 
 }

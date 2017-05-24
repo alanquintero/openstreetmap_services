@@ -9,12 +9,13 @@
 
 package com.alanquintero.openstreetmap.controller;
 
+import static com.alanquintero.openstreetmap.util.Constant.APP_JSON;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.alanquintero.openstreetmap.model.State;
 import com.alanquintero.openstreetmap.service.StateService;
 
 @RestController
@@ -24,10 +25,9 @@ public class MapController {
 	@Autowired
 	private StateService stateService;
 
-	@RequestMapping(value = "/getStates", method = RequestMethod.GET, produces = "application/json")
-	public State getStates() {
-		stateService.getStates();
-		return new State();
+	@RequestMapping(value = "/getStates", method = RequestMethod.GET, produces = APP_JSON)
+	public String getStates() {
+		return stateService.getStates();
 	}
 
 }

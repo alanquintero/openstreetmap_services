@@ -7,14 +7,30 @@
  * permission of Alan Quintero.
  *******************************************************/
 
-package com.alanquintero.openstreetmap.dao;
+package com.alanquintero.openstreetmap.json;
 
 import java.util.List;
 
-import com.alanquintero.openstreetmap.model.State;
+public class StateJson {
 
-public interface StateDAO {
+	private String type;
 
-	public List<State> getStates();
+	private List<StateFeature> features;
+
+	public String getType() {
+		return type;
+	}
+
+	public void setType(String type) {
+		this.type = type;
+	}
+
+	public List<StateFeature> getFeatures() {
+		return features;
+	}
+
+	public void setFeatures(List<StateFeature> features) {
+		this.features = features;
+	}
 
 }

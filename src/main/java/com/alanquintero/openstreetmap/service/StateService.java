@@ -11,6 +11,6 @@ package com.alanquintero.openstreetmap.service;
 
 public interface StateService {
 
-	public void getStates();
+	public String getStates();
 
 }
