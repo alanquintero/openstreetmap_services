@@ -6,6 +6,8 @@ package com.openstreetmap.services.controller;
 
 import com.openstreetmap.services.model.Geometry;
 import com.openstreetmap.services.service.GeometryService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -21,6 +23,8 @@ import java.util.List;
 @RestController
 @RequestMapping("/api/v1")
 public class GeometryController {
+
+    private static final Logger LOGGER = LoggerFactory.getLogger(GeometryController.class);
 
     private final GeometryService geometryService;
 
@@ -41,7 +45,9 @@ public class GeometryController {
      */
     @GetMapping("/geometries")
     public List<Geometry> getGeometries() {
-        return geometryService.getAllGeometries();
+        final List<Geometry> geometries = geometryService.getAllGeometries();
+        LOGGER.info("GEOMETRIES: {}", geometries);
+        return geometries;
     }
 
 }

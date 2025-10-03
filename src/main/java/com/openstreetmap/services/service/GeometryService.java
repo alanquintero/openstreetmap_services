@@ -4,8 +4,11 @@
  */
 package com.openstreetmap.services.service;
 
+import com.openstreetmap.services.controller.GeometryController;
 import com.openstreetmap.services.model.Geometry;
 import com.openstreetmap.services.repository.GeometryRepository;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -19,6 +22,8 @@ import java.util.List;
 @Service
 public class GeometryService {
 
+    private static final Logger LOGGER = LoggerFactory.getLogger(GeometryService.class);
+
     private final GeometryRepository repository;
 
     public GeometryService(GeometryRepository repository) {
@@ -26,6 +31,7 @@ public class GeometryService {
     }
 
     public List<Geometry> getAllGeometries() {
+        LOGGER.info("getAllGeometries");
         return repository.findAll();
     }
 }
