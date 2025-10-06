@@ -51,6 +51,8 @@ Calling GET /api/v1/geometries will return JSON like:
 ]
 ```
 
+![Demo](docs/demo.gif)
+
 ### 5. Database
 
 The app uses an in-memory H2 database preloaded from `data.sql`.
