@@ -60,8 +60,6 @@ The app uses an in-memory H2 database preloaded from `data.sql`.
 The `data.sql` file was generated using the project [jsonToQuery](https://github.com/alanquintero/jsonToQuery/) and will
 reset each time the app restarts.
 
-The data.sql file was generated with the next project:
-
 ### 6. Running Tests
 
 ```
